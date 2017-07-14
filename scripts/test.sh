@@ -9,7 +9,7 @@ if [[ $(uname) == "Linux" ]]; then
 fi
 
 # Create a temp dir and clean it up on exit
-TEMPDIR=`mktemp -d -t nomad-test.XXX`
+TEMPDIR=`mktemp -d -t nomad-test.XXXXXX`
 trap "rm -rf $TEMPDIR" EXIT HUP INT QUIT TERM
 
 # Build the Nomad binary for the API tests
